@@ -1,0 +1,265 @@
+.slide-enter-active,
+.slide-leave-active {
+  transition: opacity 0.5s ease;
+}
+
+.slide-enter-from,
+.slide-leave-to {
+  opacity: 0;
+}
+
+li {
+  transition: all .3s ease;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Nunito", sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+hr {
+  margin: 0;
+}
+
+button {
+  cursor: pointer;
+}
+
+.main {
+  display: flex;
+  justify-content: center;
+}
+
+.siteTitle {
+  font-size: 35px;
+  text-align: center;
+}
+
+.todoApp {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  width: 50%;
+}
+
+.addTodo {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.formGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.formGroup input,
+.formGroup textarea {
+  font-family: "Nunito", sans-serif;
+  font-size: 16px;
+  outline: none;
+  border: 1.8px solid gray;
+  border-radius: 6px;
+  padding: 8px;
+  background: transparent;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  resize: vertical;
+}
+
+.addBtn,
+.deleteAllBtn {
+  font-size: 20px;
+  width: 100%;
+  background-color: #765aec;
+  color: #fff;
+  border-radius: 8px;
+  border: none;
+  padding: 10px;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  transition: 0.2s ease;
+}
+
+.addBtn:hover,
+.deleteAllBtn:hover {
+  background-color: #6458ee;
+}
+
+.todoList h2 {
+  font-size: 35px;
+  margin: 20px 0;
+  text-align: center;
+}
+
+.todoList h3 {
+  font-size: 24px;
+  color: gray;
+  text-align: center;
+}
+
+.todos {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 0;
+}
+
+.todo {
+  border: 1px solid gray;
+  padding: 10px;
+  border-radius: 8px;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  list-style-type: none;
+}
+
+hr {
+  border: none;
+  border-bottom: 1px solid gray;
+}
+
+.todoContent h5 {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.todoInfo {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 8px;
+}
+
+.todoInfo span {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-left: 15px;
+}
+
+.todoInfo button {
+  font-size: 18px;
+  border: none;
+  background: none;
+  outline: none;
+  padding: 0;
+}
+
+.todoInfo .editBtns {
+  font-size: 14px;
+  padding: 3px 6px;
+  border-radius: 5px;
+  background-color: #777777;
+  color: #fff;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+.editInput, .editTextarea {
+  font-family: 'Nunito', sans-serif;
+  background: transparent;
+  outline: none;
+  border: none;
+  border-radius: 8px;
+  padding: 4px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  resize: vertical;
+}
+
+.editInput {
+  font-size: 20px;
+  margin-bottom: 5px;
+}
+
+.editTextarea {
+  font-size: 16px;
+  width: 100%;
+}
+
+.deleteAllBtn {
+  margin: 25px 0;
+}
+
+.theme {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  z-index: 999;
+}
+
+.theme input {
+  display: none;
+}
+
+.fa-sun {
+  color: rgb(247, 255, 216);
+}
+
+.fa-moon {
+  color: rgb(24, 24, 24);
+}
+
+.theme i {
+  font-size: 28px;
+}
+
+/* ====== dark mode ===== */
+
+.dark {
+  background-color: #000;
+}
+
+.dark > * {
+  color: #fff;
+}
+
+.dark input {
+  color: #fff;
+}
+
+.dark textarea {
+  color: #fff;
+}
+
+.dark .todoContent > h5 {
+  color: #e2dfdf;
+}
+
+.dark .todoInfo > p {
+  color: #cecece;
+}
+
+.dark small {
+  color: #a8a8a8;
+}
+
+.dark .editInput, .dark .editTextarea {
+  box-shadow: rgba(135, 173, 255, 0.25) 0px 30px 60px -12px inset, rgba(161, 175, 255, 0.3) 0px 18px 36px -18px inset;
+} 
+
+.dark .deleteBtn, .dark .editBtn {
+  color: #a8a8a8;
+}
+
+/* ======= Responsive  ===== */
+
+@media (max-width: 1060px) {
+  .todoApp {
+    width: 70%;
+  }
+}
+
+@media (max-width: 768px) {
+  .todoApp {
+    width: 90%;
+  }
+}
